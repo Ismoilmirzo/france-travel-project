@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Customize Your Package - Voyageur</title>
+</head>
+<body>
+
+
+<!-- Header and Navigation (You can include these in all pages) -->
+<header>
+    <div class="logo">Voyageur</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<section class="customize-section">
+    <div class="customize-container">
+        <h2>Customize Your Travel Package</h2>
+        <p>Answer a few questions to tailor your travel experience. Your preferences will help us provide you with an approximate price.</p>
+
+        <form id="customize-form">
+            <label for="paris-location">Which part of Paris would you like to visit?</label>
+            <select id="paris-location" name="paris-location">
+                <option value="eiffel-tower">Eiffel Tower</option>
+                <option value="louvre-museum">Louvre Museum</option>
+                <option value="montmartre">Montmartre</option>
+            </select>
+
+            <label for="flight-class">Select your flight class:</label>
+            <select id="flight-class" name="flight-class">
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first-class">First Class</option>
+            </select>
+
+            <label for="in-flight-meal">What would you order during the flight?</label>
+            <input type="checkbox" id="meal-standard" name="in-flight-meal" value="standard">
+            <label for="meal-standard">Standard Meal</label>
+            <input type="checkbox" id="meal-vegetarian" name="in-flight-meal" value="vegetarian">
+            <label for="meal-vegetarian">Vegetarian Meal</label>
+            <input type="checkbox" id="meal-special" name="in-flight-meal" value="special">
+            <label for="meal-special">Special Meal</label>
+
+            <button type="button" onclick="calculatePrice()">Calculate</button>
+        </form>
+
+        <div id="result-container" style="display: none;">
+            <h3>Your Approximate Price:</h3>
+            <p id="approx-price">$0</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer (You can include this in all pages) -->
+<footer>
+    <p>&copy; 2023 Voyageur. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript for Cost Calculation -->
+<script src="customize.js"></script>
+
+</body>
+</html>
